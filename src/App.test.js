@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("find develop in doc", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText(/develop/i);
   expect(linkElement).toBeInTheDocument();
+});
+
+test("find input with placeholder", () => {
+  render(<App />);
+  const worldElement = screen.getByPlaceholderText(/name/i);
+  expect(worldElement).toBeInTheDocument();
 });
