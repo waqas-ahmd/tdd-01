@@ -13,6 +13,5 @@ deploy:
   domain: waiting-doctor.surge.sh
   skip_cleanup: true
   project: "./build/"
-
-on:
-  branch: main
+  on:
+    branch: main
