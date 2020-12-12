@@ -3,7 +3,7 @@ import App from "./App";
 
 test("find develop in doc", () => {
   render(<App />);
-  const linkElement = screen.getByText(/develop/i);
+  const linkElement = screen.getByText(/developers/i);
   expect(linkElement).toBeInTheDocument();
 });
 
