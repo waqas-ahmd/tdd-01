@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - "stable"
+
+script:
+  - npm install
+  - npm test
+  - npm run build
+
+deploy:
+  provider: netlify
+  site: 62bf7ae6-8096-418c-bc6a-01ce71ef9102
+  auth: Ok1q5efylKXBpqml5gyIixVMvqjmI9jrsmXOMoShJAA
+  edge: true
+  dir: "build/"
+
+on:
+  branch: main
